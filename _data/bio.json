@@ -10,9 +10,7 @@
     "location": { "address": "", "postalCode": "96744", "city": "Kaneohe", "countryCode": "USA", "region": "Hawaii" },
     "profiles": [
       { "network": "github", "username": "micahtilton", "url": "http://github.com/micahtilton" },
-      { "network": "linkedin", "username": "mollymaluhia", "url": "https://www.linkedin.com/in/micah-tilton-0a4b65289/" },
-      { "network": "twitter", "username": "mollymal", "url": "http://twitter.com/changeme" },
-      { "network": "instagram", "username": "molly", "url": "http://instagram.com/changeme" }
+      { "network": "linkedin", "username": "micah-tilton", "url": "https://www.linkedin.com/in/micah-tilton-0a4b65289/" }
     ]
   },
   "interests": [
