@@ -62,8 +62,8 @@
       "endDate": "2023-05-12",
       "summary": "Hawaii Trail Cam Fog Detection Using Machine Learning",
       "highlights": [
-        "Trained and tested multiple machine learning models on trailcam footage from all over the island",
-        "Created a simulated dataset of trailcam footage using Blender with volumetric fog"
+        "Trained and tested multiple machine learning models on trail cam footage from all over the island",
+        "Created a simulated dataset of trail cam footage using Blender with volumetric fog"
       ]
     },
     {
@@ -85,8 +85,8 @@
       "endDate": "2022-07-22",
       "summary": "Introduced Computer Science Principles to highschool students interested in Computer Science",
       "highlights": [
-        "Created hands-on activites for the students to learn sorting algorithms",
-        "Taught Python using Jupyter Notebooks. Students were able to create a ceaser cipher in Python after the summer workshop"
+        "Created hands-on activities for the students to learn sorting algorithms",
+        "Taught Python using Jupyter Notebooks. Students were able to create a caeser cipher in Python after the summer workshop"
       ]
     }
   ],
