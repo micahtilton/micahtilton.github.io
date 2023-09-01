@@ -7,10 +7,10 @@ date: 2023-08-29
 published: true
 labels:
   - Software Engineering
-  - Learning
+  - JavaScript
 ---
 ## Background
-During my Computer Science journey at University of Hawaii at Manoa I have programmed in many different languages. I have used Java to learn object-oriented programming, C and C++ to program in a lower level language, and C# for game development. In my spare time I have enjoyed learning python because it is an elegant language that is highly readable, clean and it has many useful libraries for machine learning which I have been interested in currently.
+During my Computer Science journey at University of Hawaii at Manoa I have programmed in many different languages. I have used Java to learn object-oriented programming, C and C++ to program in a lower level language, and C# for game development. In my spare time I have enjoyed learning python because it is an elegant language that is highly readable, clean and it has many useful libraries for machine learning which I have been interested in recently.
 
 ## Software Engineering
 In ICS 314 (Software Engineering) I have been learning javascript. Its simplicity makes it easier to learn and use. One aspect of javascript that I found interesting is that functions are treated like any other object. I can dynamically create functions in functions, assign functions to variables, and even create functions without names. This flexibility makes javascript a very powerful language to use. However, javascript’s simplicity may result in some unexpected results. For example, type coercion in javascript follows many rules that are not specified by the user.

@@ -40,9 +40,9 @@ int mandelbrotVal(float cx, float cy)
     return 0;
 }
 ```
-This function is the main driver for determining if a point is in the mandelbrot set. There are many optimizations that allow the program to run in real-time at 60fps. Imaginary numbers are represented as two floating point numbers, one for the real part and one for the imaginary part. Some math operations - such as squaring complex numbers - are expaned out to reduce the number of computations that the GPU has to calulate for each iteration. Optimizing this function is crucial for good performance as this function is ran in parallel for each of the 2,073,600 pixels in a standard Full HD monitor.
+This function is the main driver for determining if a point is in the mandelbrot set. There are many optimizations that allow the program to run in real-time at 60fps. Imaginary numbers are represented as two floating point numbers, one for the real part and one for the imaginary part. Some math operations - such as squaring complex numbers - are expanded out to reduce the number of computations that the GPU has to calculate for each iteration. Optimizing this function is crucial for good performance as this function is ran in parallel for each of the 2,073,600 pixels in a standard Full HD monitor.
 
 ## Unexpected Setbacks
-The GPU that I own does not support 64 bit floating point operations. This resulted in some pixelation as I zoom in further into the mandelbrot set. There are some work-arounds to this problem but it requires arbitrary precision arithmatic. This will take much longer to calculate on the GPU and performance will drop by at least a factor of 4.
+The GPU that I own does not support 64 bit floating point operations. This resulted in some pixelation as I zoomed in further into the mandelbrot set. There are some work-arounds to this problem but it requires arbitrary precision arithmetic. This will take much longer to calculate on the GPU and performance will drop by at least a factor of 4.
 
 <img src="../img/mandelbrot/mandelbrot-pixelated.png" width="800">
