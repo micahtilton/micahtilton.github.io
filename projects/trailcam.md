@@ -9,18 +9,18 @@ labels:
   - Machine Learning
   - Artificial Intelligence
   - Climate Research
-summary: ""
+summary: "I worked with a partner to create a machine learning model that will classify an image as foggy or clear."
 ---
-
-<img src="../img/trailcam/kaala-clear.jpg" width="500">
 
 ## Overview
 I worked with a partner to create a machine learning model that will classify an image as foggy or clear. This research is important for monitoring the climate of Hawaii over long periods of time. Fog sensors can be large, expensive, and may be inaccessible for some people. Our tool could help people who have tens of thousands of trail-cam images to quickly classify their images into foggy or clear categories.
 
+<img src="../img/trailcam/kaala-clear.jpg" width="800">
+
 ## Tools
 I had to learn Blender (3D Graphics Tool) to generate a simulated data set of foggy and clear images. I generated a data set of over 100 images which took a few hours to render. The reason why it took such a long time is because I used a volumetric fog simulation with a physically based path tracer for maximum realism. I trained a machine learning model on the generated data and observed its performance on real world data.
 
-<img src="../img/trailcam/blender-clear.png" width="500">
+<img src="../img/trailcam/blender-clear.png" width="800">
 
 ```python
 # load features

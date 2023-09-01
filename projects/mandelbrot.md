@@ -9,7 +9,7 @@ labels:
   - GPU Acceleration
   - C#
   - Unity Engine
-summary: "This mandelbrot set explorer was created by myself using Unity game engine"
+summary: "This mandelbrot set explorer was programmed using C# with Unity game engine and HLSL for GPU acceleration."
 ---
 
 ## Inspiration
@@ -45,4 +45,4 @@ This function is the main driver for determining if a point is in the mandelbrot
 ## Unexpected Setbacks
 The GPU that I own does not support 64 bit floating point operations. This resulted in some pixelation as I zoom in further into the mandelbrot set. There are some work-arounds to this problem but it requires arbitrary precision arithmatic. This will take much longer to calculate on the GPU and performance will drop by at least a factor of 4.
 
-<img src="../img/mandelbrot/mandelbrot-pixelated.png" width="500">
+<img src="../img/mandelbrot/mandelbrot-pixelated.png" width="800">

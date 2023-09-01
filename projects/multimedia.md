@@ -3,7 +3,7 @@ layout: project
 type: project
 image: img/multimedia/pvnp.jpg
 title: "P vs NP Vertasium Contest Submission"
-date: 2022
+date: 2021
 published: true
 labels:
   - Content Creation
