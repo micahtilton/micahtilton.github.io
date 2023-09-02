@@ -5,6 +5,7 @@ image: img/trailcam/trailcam-ml-2.png
 title: "Fog Classification of Trail-Cam Footage in Hawai'i"
 date: 2022
 published: true
+priority: 2
 labels:
   - Machine Learning
   - Artificial Intelligence

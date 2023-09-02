@@ -5,6 +5,7 @@ image: img/ubuntu-server/thumb.jpg
 title: "Headless Ubuntu Home Server"
 date: 2023
 published: true
+priority: 3
 labels:
   - Networking
   - Tmux

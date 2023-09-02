@@ -5,6 +5,7 @@ image: img/mandelbrot/mandelbrot-set.png
 title: "GPU Accelerated Mandelbrot Set Explorer"
 date: 2022
 published: true
+priority: 1
 labels:
   - GPU Acceleration
   - C#

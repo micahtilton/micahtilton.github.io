@@ -5,6 +5,7 @@ image: img/raspberry-pi/thumb.png
 title: "Raspberry Pi for Electrical Engineering and Networking"
 date: 2020
 published: true
+priority: 4
 labels:
   - Networking
   - Electrical Engineering

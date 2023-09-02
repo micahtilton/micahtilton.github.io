@@ -5,6 +5,7 @@ image: img/multimedia/pvnp.jpg
 title: "P vs NP Vertasium Contest Submission"
 date: 2021
 published: true
+priority: 0
 labels:
   - Content Creation
   - Video Editing
