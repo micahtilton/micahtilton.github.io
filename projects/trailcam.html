@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Fog Classification of Trail-Cam Footage in Hawai'i | Micah Tilton | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/micahtilton.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Micah Tilton | Professional Portfolio">
+    <meta property="og:url" content="https://micahtilton.github.io/projects/trailcam.html">
+    <meta property="og:title" content="Fog Classification of Trail-Cam Footage in Hawai'i | Micah Tilton | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/micahtilton.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Fog Classification of Trail-Cam Footage in Hawai'i | Micah Tilton | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Micah Tilton</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Fog Classification of Trail-Cam Footage in Hawai'i</h1>
+ <h2 id="overview">Overview:</h2>
+<p>I worked with a partner to create a machine learning model that will classify an image as foggy or clear. This research is important for monitoring the climate of Hawaii over long periods of time. Fog sensors can be large, expensive, and may be inaccessible for some people. Our tool could help people who have tens of thousands of trail-cam images to quickly classify their images into foggy or clear categories.</p>
+
+<p><img src="../img/trailcam/kaala-clear.jpg" width="800" /></p>
+
+<h2 id="tools">Tools:</h2>
+<p>I had to learn Blender (3D Graphics Tool) to generate a simulated data set of foggy and clear images. I generated a data set of over 100 images which took a few hours to render. The reason why it took such a long time is because I used a volumetric fog simulation with a physically based path tracer for maximum realism. I trained a machine learning model on the generated data and observed its performance on real world data.</p>
+
+<p><img src="../img/trailcam/blender-clear.png" width="800" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># load features
+</span><span class="n">df_train</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"features-generated.txt"</span><span class="p">))</span>
+<span class="n">df_test</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"features.txt"</span><span class="p">))</span>
+
+<span class="n">X_train</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">y_train</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="s">"category"</span><span class="p">].</span><span class="n">to_numpy</span><span class="p">()</span>
+
+<span class="c1"># transform features
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">df_train</span><span class="p">[</span><span class="s">"location"</span><span class="p">].</span><span class="n">unique</span><span class="p">():</span>
+    <span class="n">site</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="n">df_train</span><span class="p">[</span><span class="s">"location"</span><span class="p">]</span> <span class="o">==</span> <span class="n">i</span><span class="p">]</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">site</span><span class="p">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]]</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">().</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+    <span class="n">X_train</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># train model
+</span><span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
+<span class="n">model</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># test model
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">df_test</span><span class="p">[</span><span class="s">"location"</span><span class="p">].</span><span class="n">unique</span><span class="p">():</span>
+    <span class="n">site</span> <span class="o">=</span> <span class="n">df_test</span><span class="p">[</span><span class="n">df_test</span><span class="p">[</span><span class="s">"location"</span><span class="p">]</span> <span class="o">==</span> <span class="n">i</span><span class="p">]</span>
+    <span class="n">X_test</span> <span class="o">=</span> <span class="n">site</span><span class="p">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]]</span>
+    <span class="n">X_test</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">().</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="n">y_true</span>  <span class="o">=</span> <span class="n">site</span><span class="p">[</span><span class="s">"category"</span><span class="p">].</span><span class="n">to_numpy</span><span class="p">()</span>
+    <span class="n">auroc</span> <span class="o">=</span> <span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">model</span><span class="p">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">])</span>
+</code></pre></div></div>
+
+<h2 id="results">Results:</h2>
+<p>The logistic regression model trained with the data set of images generated with Blender yielded an average AUROC of 0.74. In other words, the model learned some of the main features of foggy images and was able to predict foggy images in real world data without having any real world data in its training set. Isn’t that cool!</p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
