@@ -1,0 +1,14 @@
+<!-- <div class="fs-1 text-center d-flex m-3 border border-2 rounded-4 p-2">
+    <img src="../img/logos/tiktok.png" width="100" height="100">
+    <a class="flex-grow-1 align-self-center" href="https://www.tiktok.com/@its_tilton" target="_blank">YouTube</a>
+</div> -->
+
+<a class="col align-self-center fs-2 fw-bold" href="{{ include.url }}" target="_blank" style="color: inherit; text-decoration: none;">
+    <div class="social-link fs-1 text-center row m-3 border border-2 rounded-4 p-2">
+        <div class="col-2 d-flex">
+            <img src="{{ include.img }}" width="100" height="100">
+        </div>
+        <div class="col align-self-center fs-2 fw-bold">{{ include.name }}</div>
+        <div class="col-2"></div>
+    </div>
+</a>

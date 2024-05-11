@@ -38,3 +38,14 @@ a {
   background-color: var(--bs-white);
   border-top: none;
 }
+
+.social-link {
+  flex-basis: 0;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.social-link:hover {
+  padding: 20px !important;
+  background-color: powderblue;
+}
