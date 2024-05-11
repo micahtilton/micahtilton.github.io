@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Simplicity: JavaScript's Downfall? | Micah Tilton | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/micahtilton.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Micah Tilton | Professional Portfolio">
+    <meta property="og:url" content="https://micahtilton.github.io/essays/javascript-reflect-1.html">
+    <meta property="og:title" content="Simplicity: JavaScript's Downfall? | Micah Tilton | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/micahtilton.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Simplicity: JavaScript's Downfall? | Micah Tilton | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Micah Tilton</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Simplicity: JavaScript's Downfall?</h1>
+  <span class="date">29 Aug 2023</span>
+  <hr>
+  <h2 id="background">Background:</h2>
+<p>During my Computer Science journey at University of Hawaii at Manoa I have programmed in many different languages. I have used Java to learn object-oriented programming, C and C++ to program in a lower level language, and C# for game development. In my spare time I have enjoyed learning python because it is an elegant language that is highly readable, clean and it has many useful libraries for machine learning which I have been interested in recently.</p>
+
+<h2 id="software-engineering">Software Engineering:</h2>
+<p>In ICS 314 (Software Engineering) I have been learning javascript. Its simplicity makes it easier to learn and use. One aspect of javascript that I found interesting is that functions are treated like any other object. I can dynamically create functions in functions, assign functions to variables, and even create functions without names. This flexibility makes javascript a very powerful language to use. However, javascript’s simplicity may result in some unexpected results. For example, type coercion in javascript follows many rules that are not specified by the user.</p>
+
+<h3 id="example">Example</h3>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">([]</span> <span class="o">+</span> <span class="p">{});</span>
+<span class="c1">// Outputs: [object Object]</span>
+</code></pre></div></div>
+<p>Adding together an empty array with an empty object and javascript will automatically convert the result to the string [object Object]. Type coercion may work as expected 99% of the time but the other 1% may cause unexpected behaviors in your code that could be hard to trace. Overall, javascript has stood the test of time and will not leave any time soon. I believe that learning this language is an important skill for any developer to have.</p>
+
+<h2 id="practice-makes-consistency">Practice Makes Consistency:</h2>
+<p>To practice programming in javascript I have completed the “Basic JavaScript” freeCodeCamp course. With over 100 curated exercises, learning the basics of javascript was easy and entertaining. After learning the basic syntax and features of javascript, I started refining my knowledge by completing LeetCode problems. In class I practiced my algorithm development with WODs (Workout of the day). These WODs are timed and you get ranked based on the time it takes you to complete them. These were fun challenges that tested my ability to problem solve under pressure. This style of learning is stressful at times but I believe that it helped me to become a better developer.</p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
