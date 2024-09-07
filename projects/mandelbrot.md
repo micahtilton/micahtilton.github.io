@@ -14,7 +14,7 @@ summary: "This mandelbrot set explorer was programmed using C# with Unity game e
 ---
 
 ## Inspiration: 
-I created this project because I love fractals and math. I have never programmed for the GPU so this was no easy task. By making this application, I was able to practice using Unity engine, C# programming and GPU programming with HLSL.
+I developed this project out of my passion for fractals and mathematics. It was my first experience programming for the GPU, which presented some challenges. Through this project, I gained valuable hands-on experience with the Unity engine, honed my C# programming skills, and learned about GPU programming using HLSL.
 
 ## Mandelbrot:
 ```c
@@ -41,9 +41,15 @@ int mandelbrotVal(float cx, float cy)
     return 0;
 }
 ```
-This function is the main driver for determining if a point is in the mandelbrot set. There are many optimizations that allow the program to run in real-time at 60fps. Imaginary numbers are represented as two floating point numbers, one for the real part and one for the imaginary part. Some math operations - such as squaring complex numbers - are expanded out to reduce the number of computations that the GPU has to calculate for each iteration. Optimizing this function is crucial for good performance as this function is ran in parallel for each of the 2,073,600 pixels in a standard Full HD monitor.
+
+<div class="text-center m-3"><img src="../img/mandelbrot/mandelbrot-set.png" height="400"></div>
+
+This function is key to figuring out whether a point belongs to the Mandelbrot set. I've implemented several optimizations that enable the program to run smoothly at 60 frames per second. To handle imaginary numbers, we use two floating-point numbers: one for the real part and another for the imaginary part. We also simplify some mathematical operations, like squaring complex numbers, to minimize the calculations the GPU needs to perform for each iteration. Optimizing this function is essential for achieving great performance, as it runs simultaneously for each of the 2,073,600 pixels on a standard Full HD monitor.
+
+
 
 ## Unexpected Setbacks:
-The GPU that I own does not support 64 bit floating point operations. This resulted in some pixelation as I zoomed in further into the mandelbrot set. There are some work-arounds to this problem but it requires arbitrary precision arithmetic. This will take much longer to calculate on the GPU and performance will drop by at least a factor of 4.
+My current GPU doesn't support 64-bit floating point operations, which caused some pixelation when I zoomed in on the Mandelbrot set. This is due to floating point errors. While there are ways to address this issue, they involve using arbitrary precision arithmetic, which significantly slows down calculations on the GPU and can lead to a major drop in performance.
 
-<img src="../img/mandelbrot/mandelbrot-pixelated.png" width="800">
+
+<div class="text-center"><img src="../img/mandelbrot/mandelbrot-pixelated.png" height="400"></div>

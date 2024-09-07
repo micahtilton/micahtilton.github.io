@@ -14,14 +14,14 @@ summary: "I worked with a partner to create a machine learning model that will c
 ---
 
 ## Overview:
-I worked with a partner to create a machine learning model that will classify an image as foggy or clear. This research is important for monitoring the climate of Hawaii over long periods of time. Fog sensors can be large, expensive, and may be inaccessible for some people. Our tool could help people who have tens of thousands of trail-cam images to quickly classify their images into foggy or clear categories.
+I collaborated with a partner to develop a machine learning model that can identify whether an image is foggy or clear. This project is significant for tracking Hawaii's climate over time. Traditional fog sensors can be bulky, costly, and not easily accessible to everyone. Our tool offers a solution for individuals with large collections of trail camera images, allowing them to efficiently sort their photos into foggy or clear categories.
 
-<img src="../img/trailcam/kaala-clear.jpg" width="800">
+<div class="text-center m-2"><img src="../img/trailcam/kaala-clear.jpg" height="400px"></div>
 
 ## Tools:
-I had to learn Blender (3D Graphics Tool) to generate a simulated data set of foggy and clear images. I generated a data set of over 100 images which took a few hours to render. The reason why it took such a long time is because I used a volumetric fog simulation with a physically based path tracer for maximum realism. I trained a machine learning model on the generated data and observed its performance on real world data.
+I learned how to use Blender, a 3D graphics tool, to create a set of images that included both foggy and clear scenes. This project involved producing over 100 images, which took several hours to complete due to the detailed fog effects I used to ensure they looked as realistic as possible. The fog effects were created using a physically based path-tracer for realistic lighting. After creating these images, I trained a machine learning model using this data and then tested how well it performed with real-world images.
 
-<img src="../img/trailcam/blender-clear.png" width="800">
+<div class="text-center m-2"><img src="../img/trailcam/blender-clear.png" height="400px"></div>
 
 ```python
 # load features
