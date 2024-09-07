@@ -20,10 +20,8 @@ jobs:
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
 
     - name: Deploy
-      uses: s0/git-publish-subdir-action@develop
-      env:
-        REPO: self
-        BRANCH: gh-pages
-        FOLDER: _site
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        TARGET_DIR: /
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_site
+        publish_branch: gh-pages
