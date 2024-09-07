@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/techfolio-theme/clean.css">
     <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
     <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
     
     <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
@@ -32,8 +33,8 @@
     <div class="ms-auto">
       <ul class="navbar-nav mb-2 mb-lg-0">
         <a class="nav-link" href="/#projects">Projects</a>
-        <a class="nav-link" href="/#essays">Essays</a>
-        <a class="nav-link" href="/assets/micah-tilton-resume.pdf" target="_blank">Resume</a>
+        <!-- <a class="nav-link" href="/#essays">Essays</a> -->
+        <a class="nav-link" href="/assets/micah_tilton_resume_2024.pdf" target="_blank">Resume</a>
       </ul>
     </div>
   </div>
@@ -42,7 +43,7 @@
 <div class="container py-4">
   <h1 class="display-4">GPU Accelerated Mandelbrot Set Explorer</h1>
  <h2 id="inspiration">Inspiration:</h2>
-<p>I created this project because I love fractals and math. I have never programmed for the GPU so this was no easy task. By making this application, I was able to practice using Unity engine, C# programming and GPU programming with HLSL.</p>
+<p>I developed this project out of my passion for fractals and mathematics. It was my first experience programming for the GPU, which presented some challenges. Through this project, I gained valuable hands-on experience with the Unity engine, honed my C# programming skills, and learned about GPU programming using HLSL.</p>
 
 <h2 id="mandelbrot">Mandelbrot:</h2>
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">mandelbrotVal</span><span class="p">(</span><span class="kt">float</span> <span class="n">cx</span><span class="p">,</span> <span class="kt">float</span> <span class="n">cy</span><span class="p">)</span>
@@ -68,25 +69,17 @@
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
-<p>This function is the main driver for determining if a point is in the mandelbrot set. There are many optimizations that allow the program to run in real-time at 60fps. Imaginary numbers are represented as two floating point numbers, one for the real part and one for the imaginary part. Some math operations - such as squaring complex numbers - are expanded out to reduce the number of computations that the GPU has to calculate for each iteration. Optimizing this function is crucial for good performance as this function is ran in parallel for each of the 2,073,600 pixels in a standard Full HD monitor.</p>
+
+<div class="text-center m-3"><img src="../img/mandelbrot/mandelbrot-set.png" height="400" /></div>
+
+<p>This function is key to figuring out whether a point belongs to the Mandelbrot set. I’ve implemented several optimizations that enable the program to run smoothly at 60 frames per second. To handle imaginary numbers, we use two floating-point numbers: one for the real part and another for the imaginary part. We also simplify some mathematical operations, like squaring complex numbers, to minimize the calculations the GPU needs to perform for each iteration. Optimizing this function is essential for achieving great performance, as it runs simultaneously for each of the 2,073,600 pixels on a standard Full HD monitor.</p>
 
 <h2 id="unexpected-setbacks">Unexpected Setbacks:</h2>
-<p>The GPU that I own does not support 64 bit floating point operations. This resulted in some pixelation as I zoomed in further into the mandelbrot set. There are some work-arounds to this problem but it requires arbitrary precision arithmetic. This will take much longer to calculate on the GPU and performance will drop by at least a factor of 4.</p>
+<p>My current GPU doesn’t support 64-bit floating point operations, which caused some pixelation when I zoomed in on the Mandelbrot set. This is due to floating point errors. While there are ways to address this issue, they involve using arbitrary precision arithmetic, which significantly slows down calculations on the GPU and can lead to a major drop in performance.</p>
 
-<p><img src="../img/mandelbrot/mandelbrot-pixelated.png" width="800" /></p>
+<div class="text-center"><img src="../img/mandelbrot/mandelbrot-pixelated.png" height="400" /></div>
 
 </div>
-
-<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
-  <div class="container-fluid">
-    <div class="ms-auto">
-      <ul class="navbar-nav mb-2 mb-lg-0">
-        <!-- <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small> -->
-      </ul>
-    </div>
-  </div>
-</footer>
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>

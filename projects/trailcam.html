@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/techfolio-theme/clean.css">
     <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
     <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
     
     <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
@@ -32,8 +33,8 @@
     <div class="ms-auto">
       <ul class="navbar-nav mb-2 mb-lg-0">
         <a class="nav-link" href="/#projects">Projects</a>
-        <a class="nav-link" href="/#essays">Essays</a>
-        <a class="nav-link" href="/assets/micah-tilton-resume.pdf" target="_blank">Resume</a>
+        <!-- <a class="nav-link" href="/#essays">Essays</a> -->
+        <a class="nav-link" href="/assets/micah_tilton_resume_2024.pdf" target="_blank">Resume</a>
       </ul>
     </div>
   </div>
@@ -42,14 +43,14 @@
 <div class="container py-4">
   <h1 class="display-4">Fog Classification of Trail-Cam Footage in Hawai'i</h1>
  <h2 id="overview">Overview:</h2>
-<p>I worked with a partner to create a machine learning model that will classify an image as foggy or clear. This research is important for monitoring the climate of Hawaii over long periods of time. Fog sensors can be large, expensive, and may be inaccessible for some people. Our tool could help people who have tens of thousands of trail-cam images to quickly classify their images into foggy or clear categories.</p>
+<p>I collaborated with a partner to develop a machine learning model that can identify whether an image is foggy or clear. This project is significant for tracking Hawaii’s climate over time. Traditional fog sensors can be bulky, costly, and not easily accessible to everyone. Our tool offers a solution for individuals with large collections of trail camera images, allowing them to efficiently sort their photos into foggy or clear categories.</p>
 
-<p><img src="../img/trailcam/kaala-clear.jpg" width="800" /></p>
+<div class="text-center m-2"><img src="../img/trailcam/kaala-clear.jpg" height="400px" /></div>
 
 <h2 id="tools">Tools:</h2>
-<p>I had to learn Blender (3D Graphics Tool) to generate a simulated data set of foggy and clear images. I generated a data set of over 100 images which took a few hours to render. The reason why it took such a long time is because I used a volumetric fog simulation with a physically based path tracer for maximum realism. I trained a machine learning model on the generated data and observed its performance on real world data.</p>
+<p>I learned how to use Blender, a 3D graphics tool, to create a set of images that included both foggy and clear scenes. This project involved producing over 100 images, which took several hours to complete due to the detailed fog effects I used to ensure they looked as realistic as possible. The fog effects were created using a physically based path-tracer for realistic lighting. After creating these images, I trained a machine learning model using this data and then tested how well it performed with real-world images.</p>
 
-<p><img src="../img/trailcam/blender-clear.png" width="800" /></p>
+<div class="text-center m-2"><img src="../img/trailcam/blender-clear.png" height="400px" /></div>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># load features
 </span><span class="n">df_train</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"features-generated.txt"</span><span class="p">))</span>
@@ -83,17 +84,6 @@
 <p>The logistic regression model trained with the data set of images generated with Blender yielded an average AUROC of 0.74. In other words, the model learned some of the main features of foggy images and was able to predict foggy images in real world data without having any real world data in its training set. Isn’t that cool!</p>
 
 </div>
-
-<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
-  <div class="container-fluid">
-    <div class="ms-auto">
-      <ul class="navbar-nav mb-2 mb-lg-0">
-        <!-- <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small> -->
-      </ul>
-    </div>
-  </div>
-</footer>
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
