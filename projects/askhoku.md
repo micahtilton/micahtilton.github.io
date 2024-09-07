@@ -12,15 +12,16 @@ labels:
   - Web Development
 summary: "Hoku is an AI chat assistant created to questions related to ITS. Hoku will help to reduce the number of ITS help desk calls and improve the response time for questions asked."
 ---
-## AskHoku
-<div>
-    <img src="../img/askhoku/thumb.png" width="400">
-</div>
+<div class="text-center"><img class="m-2" src="../img/askhoku/thumb.png" width="300"></div>
 
-During the Hawaii Annual Code Challenge, I contributed by working on the backend of the AI system. I implemented an API service for prompt injections, created a web crawler to scrape over 600 hawaii.edu websites and managed the database for Hoku. From the HACC, I learned that working on a team can be difficult. We all have our own code styles and opinions on what and how things should be implemented. To help reduce these problems, we installed formatters to make code style consistent, assigned each person to have authority over some sections of the project and had daily meetups so that everyone was on the same page. This experience was great and I hope to particiapte in the Hawaii Annual Code Challenge next year. You can visit our GitHub repository for more information [here](https://github.com/micahtilton/hacc-askus).
+During the Hawaii Annual Code Challenge, I played a key role in developing the backend for an AI system. I built an API service to handle prompt injections, created a web crawler that gathered data from over 600 hawaii.edu websites, and managed the database for our project, Hoku. 
+
+This experience taught me that teamwork can be challenging, as everyone has their own coding styles and ideas about how to approach tasks. To address these challenges, we implemented code formatters for consistency, assigned team members specific areas of the project to oversee, and held daily meetings to ensure everyone was aligned. 
+
+Overall, it was a fantastic experience, and I look forward to participating in the Hawaii Annual Code Challenge again next year! You can visit our GitHub repository for more information [here](https://github.com/micahtilton/hacc-askus).
 
 ## Overview
-<img src="../img/askhoku/diagram.png" width="800">
+<div class="text-center p-4"><img src="../img/askhoku/diagram.png" width="800"></div>
 
 # Security Considerations and Challenges
 A prompt injection is a type of cyberattack on an AI system designed to enable the user to perform unauthorized actions. Hoku was prompted to not answer questions outside the hawaii.edu domain or the context provided. However, earlier in development, it was possible to prompt Hoku to answer questions unrelated to ITS.

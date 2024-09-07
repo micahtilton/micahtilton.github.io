@@ -15,7 +15,7 @@ summary: "This project was my entry into the Veritasium Contest hosted by Derek 
 ---
 
 ## Inspiration: 
-After highschool I took a break from college for a year. I wasn't sure what I wanted to do yet and I did not want to commit four years of my time and money unless I was sure of what I wanted in my future. Creating programming content helped me to identify what fields of Computer Science that I enjoy the most. After one year, I decided to continue my education in Computer Science at University of Hawaii at Manoa. 
+After graduating high school, I decided to take a year off from college. I wanted to take my time to figure out my interests before committing four years of time and money. During that year, I created programming content, which helped me discover the areas of Computer Science that I truly enjoy. After gaining clarity on my passions, I chose to pursue a degree in Computer Science at the University of Hawaii at Manoa.
 
 ## Veritasium Contest:
 This project was my entry into the Veritasium Contest hosted by Derek Muller. My video briefly explains what P vs NP is with engaging graphical animations.
