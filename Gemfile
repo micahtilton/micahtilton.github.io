@@ -8,8 +8,6 @@ platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo-data"
 end
 
-gem 'sassc', '~> 2.1.0'
-gem "ffi", "< 1.17.0"
 gem "webrick", "~> 1.7"
 gem 'html-proofer'
 gem 'jekyll-gist'
