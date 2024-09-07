@@ -1,0 +1,112 @@
+{
+  "basics": {
+    "name": "Micah Tilton",
+    "label": "Student",
+    "picture": "https://github.com/micahtilton.png",
+    "email": "tiltonm@hawaii.edu",
+    "phone": "808-321-7987",
+    "website": "https://micahtilton.github.io",
+    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2025.",
+    "location": { "address": "", "postalCode": "96744", "city": "Kaneohe", "countryCode": "USA", "region": "Hawaii" },
+    "profiles": [
+      { "network": "github", "username": "micahtilton", "url": "http://github.com/micahtilton" },
+      { "network": "linkedin", "username": "micahtilton", "url": "https://www.linkedin.com/in/micahtilton/" }
+    ]
+  },
+  "interests": [
+    { "name": "Machine Learning" },
+    { "name": "Software Engineering" },
+    { "name": "Game Development" },
+    { "name": "Networking" },
+    { "name": "Multimedia Content Creation" }
+  ],
+  "skills": [
+    {
+      "name": "Languages and Frameworks",
+      "keywords": [ "C", "C++", "C#", "Java", "Javascript", "Python", "Swift/SwiftUI" ]
+    },
+    {
+      "name": "Toolsets",
+      "keywords": [ "Git/GitHub", "Blender", "Unity", "DaVinci Resolve", "GIMP" ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Hawaii, Honolulu, HI",
+      "area": "Computer Science (expected Spring, 2025)",
+      "studyType": "B.S.",
+      "startDate": "2021-08-14",
+      "endDate": "Present",
+      "courses": [
+      ]
+    }
+  ],
+  "work": [
+    {
+      "company": "ChangeHI",
+      "position": "Researcher",
+      "website": "https://hawaii.edu/epscor/change-hi/",
+      "startDate": "2023-05-22",
+      "endDate": "2023-08-11",
+      "summary": "Identifying Linguistic Anti-Patterns in Data Science Projects: An Exploratory Study",
+      "highlights": [
+        "Used a grounded theory-based approach to build a taxonomy of naming violations in 125 open-source data science projects",
+        "In-person poster board and powerpoint presentations"
+      ]
+    },
+    {
+      "company": "ChangeHI",
+      "position": "Researcher",
+      "website": "https://hawaii.edu/epscor/change-hi/",
+      "startDate": "2023-01-09",
+      "endDate": "2023-05-12",
+      "summary": "Hawaii Trail Cam Fog Detection Using Machine Learning",
+      "highlights": [
+        "Trained and tested multiple machine learning models on trail cam footage from all over the island",
+        "Created a simulated dataset of trail cam footage using Blender with volumetric fog"
+      ]
+    },
+    {
+      "company": "University of Hawai'i at Manoa",
+      "position": "Learning Assistant",
+      "website": "https://manoa.hawaii.edu/learning-assistant-program/",
+      "startDate": "2022-08-14",
+      "endDate": "2023-05-12",
+      "summary": "Overview of the fundamentals of computer science emphasizing problem solving, algorithm development, implementation, and debugging/testing using an object-oriented programming language. Reinforce and strengthen problem solving skills using abstract data types and introduce software development practices.",
+      "highlights": [
+        "Offered Computer Science tutoring and helped students during lab"
+      ]
+    },
+    {
+      "company": "University of Hawai'i at Manoa",
+      "position": "Summer Workshop Mentor",
+      "website": "https://sites.google.com/a/hawaii.edu/nhsemp//",
+      "startDate": "2022-07-05",
+      "endDate": "2022-07-22",
+      "summary": "Introduced Computer Science Principles to highschool students interested in Computer Science",
+      "highlights": [
+        "Created hands-on activities for the students to learn sorting algorithms",
+        "Taught Python using Jupyter Notebooks. Students were able to create a caeser cipher in Python after the summer workshop"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "CNS Native Hawaiian Scholarship",
+      "date": "2023 Academic Year",
+      "awarder": "UH Manoa College of Natural Sciences",
+      "summary": "Scholarship awarded to assist in recruiting and retaining Native Hawaiian students enrolled in the College of Natural Sciences at the University of Hawai'i at Manoa"
+    },
+    {
+      "title": "Hawaii Annual Code Challenge 2nd Place Coded Solution",
+      "date": "November 2023",
+      "awarder": "Transform Hawaii Government, Hawaiian Airlines, Verizon, Google for Government, Tyler Technologies, Microsoft, eWorld Enterprise Solutions, Salesforce, Hawaii Data Collaborative, AT&T and AWS",
+      "summary": "The HACC generates proof-of-concepts by student, amateur and professional coders to benefit community and State agencies to support sustainability at the idea-phase level, feeding into Hawai’i’s vibrant innovation ecosystem to promote solutions for the state, community, professional development, local job creation and building local businesses."
+    }
+  ],
+  "references": [
+    {
+      "name": "Available upon request"
+    }
+  ]
+}
